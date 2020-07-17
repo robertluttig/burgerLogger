@@ -1,0 +1,25 @@
+{
+  "name": "burgerLogger",
+  "version": "1.0.0",
+  "description": "This app let's a user log different burger types",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/robertluttig/burgerLogger.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/robertluttig/burgerLogger/issues"
+  },
+  "homepage": "https://github.com/robertluttig/burgerLogger#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "express-handlebars": "^5.1.0",
+    "mysql": "^2.18.1"
+  }
+}
