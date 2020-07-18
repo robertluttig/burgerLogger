@@ -1,11 +1,11 @@
-{{!-- <h1>Cats!</h1>
+<h1>Burgers!</h1>
 
-<h2>Cats that are not sleepy!</h2>
+<h2>Create Burgers to eat and eat them!</h2>
 
 <ul>
-  {{#each cats}}
-    {{#unless sleepy}}
-      {{> cats/cat-block sleep=true}}
+  {{#each Burgers}}
+    {{#unless devoured}}
+      {{> burgers/burger-block devoured=true}}
     {{/unless}}
   {{/each}}
 </ul>
@@ -35,4 +35,4 @@
   </div>
 
   <button type="submit">Add Cat</button>
-</form> --}}
+</form>
