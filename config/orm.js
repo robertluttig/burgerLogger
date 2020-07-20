@@ -1,6 +1,7 @@
 // Import MySQL connection.
 const connection = require("../config/connection.js");
 
+// Object for all our SQL statement functions.
 const orm = {
   all: (tableInput, cb) => {
     const queryString = "SELECT * FROM ??";
@@ -11,7 +12,6 @@ const orm = {
       cb(result);
     });
   },
-
   create: (table, newRowData, cb) => {
     const queryString = "INSERT INTO ?? SET ?";
     const values = [table, newRowData];
@@ -24,6 +24,8 @@ const orm = {
     });
   },
 
+  // Example of updateValues: { name: "panther", sleepy: true }
+  // Example of condition: { id: 1 }
   update: (table, updateValues, condition, cb) => {
     const queryString = "UPDATE ?? SET ? WHERE ?";
     const values = [table, updateValues, condition];
@@ -36,6 +38,19 @@ const orm = {
       cb(result);
     });
   },
-
+  // Delete row(s) from table with given condition.
+  // Example condition: { id: 1 }
+  delete: (table, condition, cb) => {
+    const queryString = "DELETE FROM ?? WHERE ?";
+    const values = [table, condition];
+    connection.query(queryString, values, (err, result) => {
+      if (err) {
+        throw err;
+      }
+      cb(result);
+    });
+  },
 };
+
+// Export the orm object
 module.exports = orm;

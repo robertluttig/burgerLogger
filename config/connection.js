@@ -1,4 +1,4 @@
-// // Set up MySQL connection.
+// Set up MySQL connection.
 // const mysql = require("mysql");
 
 // const connection = mysql.createConnection({
@@ -22,7 +22,7 @@
 // module.exports = connection;
 
 
-// Set up MySQL connection.
+// // Set up MySQL connection.
 const mysql = require("mysql");
 
 if (process.env.JAWSDB_URL) {
